@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <title>portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      background-color:rgb(32, 33, 33);
+      height: 2500px;
+      color: white;
+      font-family: sans-serif;
+    }
+    .logo{
+      font-size: 4rem;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: black;
+      
+    
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      margin-top: 30px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .box {
+      background-color: orange;
+      color: black;
+      padding: 20px 30px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      height: 20px;
+      
+    }
+    .hero-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0 50px;
+  background-color: #252424;
+  color: #fff;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.hero-text h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 25px;
+  color:snow;
+  margin-top: 20px;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  margin-right: 70px;
+  margin-top: 100px;
+
+}
+.scroll-button {
+  text-align: center;
+  margin-top: 1px;
+  margin-right: 900px;
+}
+
+.scroll-button a {
+  color: orange;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-button a:hover {
+  opacity: 0.7;
+}
+
+.scroll-button .arrow {
+  font-size: 35px;
+  border: 2px solid orange;
+  border-radius: 50%;
+  padding: 10px;
+
+}
+.scroll-indicator {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.scroll-indicator a {
+  color: #333; /* Adjust to match your theme */
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.3s ease;
+}
+.hero h1{
+  padding: 60px 20px;
+  text-align: left;
+  position: relative;
+  font-size: 4.8rem;
+}
+
+.about-section {
+  text-align: right;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.section-title {
+  color: orange;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.about-text {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.about-button {
+  background-color: orange;
+  color: #121212;
+  border: none;
+  
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.social-icons {
+  margin-top: 30px;
+  padding-bottom: 80px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.expertise {
+  padding: 60px 20px;
+  background-color:white;
+  color: black;
+  text-align: left;
+}
+
+.expertise-heading {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.expertise-intro {
+  max-width: 700px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-size: 1.5rem;
+}
+
+.expertise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.expertise-item h4 {
+  color: orangered;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.expertise-item p {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.expertise-button {
+  margin-top: 40px;
+  background-color: orange;
+  color: #121212;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.section-title{
+  font-size: 3rem;
+  color: orangered;
+  
+}
+
+.clients {
+  padding: 60px 20px;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.clients-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.clients-heading {
+  flex: 1;
+  min-width: 250px;
+}
+
+.clients-heading h2 {
+  font-size: 1rem;
+  color: orange;
+  margin-bottom: 10px;
+}
+
+.clients-heading p {
+  font-size: 4rem;
+  line-height: 1.6;
+  margin-top: 25px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.clients-description {
+  flex: 2;
+  min-width: 300px;
+}
+
+.clients-description p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  padding-left: 18%;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+ .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+      padding: 40px 0;
+      justify-content: center;
+    }
+
+    .logo {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      max-width: 80px;
+      margin-bottom: 10px;
+    }
+
+    .logo h2 {
+      font-size: 20px;
+      margin: 0;
+      color:black;
+    }
+    .testimonials {
+  background-color: lightgoldenrodyellow;
+  padding: 80px 40px;
+  font-size: 5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  margin-top:100px;
+  flex-direction: column;
+  align-items: center;
+  color:black;
+}
+
+.testimonial {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.company {
+  font-style: italic;
+  color: orangered;
+  margin-bottom: 10px;
+}
+
+.quote{
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.testimonial-nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #555;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: orange;
+}
+.consultation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 40px;
+  background-color: #343333;
+}
+
+.content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 5.3rem;
+  text-align: left;
+}
+
+.Hit{
+  font-size: 2.3rem;
+  line-height: 1.2;
+  margin-left: 10%; 
+}
+
+.Hit2 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6a00;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  margin-top: 10%;
+
+}
+
+.cta-button:hover {
+  background-color: #e65c00;
+  
+}
+.blog-section {
+  background-color: lightyellow;
+  padding: 60px 20px;
+  text-align: center;
+  
+}
+
+.blog-section h2 {
+  font-size: 6.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.article-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(50% - 20px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.article-card h3 {
+  font-size: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.article-card p {
+  font-size: 1.2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Optional category-based styling */
+.sponsored h3 {
+  color: #ff6a00;
+}
+
+.productivity h3 {
+  color: #007acc;
+}
+
+.seo h3 {
+  color: #28a745;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .article-card {
+    width: 100%;
+  }
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  padding: 40px 20px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  margin-right: 30px;
+  min-width: 250px;
+}
+
+.footer-column h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  margin-left: 10%;
+}
+
+.footer-column p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-column form {
+  margin-top: 10px;
+}
+
+.footer-column input[type="email"] {
+  padding: 15px;
+  width: 92%;
+  margin-bottom: 10px;
+  text-align: center;
+  border: none;
+  font-size: 2rem;
+  border-radius: 4px;
+}
+
+.footer-column button {
+  background-color: #ff9900;
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+  margin-top: 50px;
+  padding: 17px ;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.footer-column button:hover {
+  background-color: #e68a00;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #292828;
+  color: #f5f5f5;
+  padding-top: 30px;
+  flex-direction: column;
+  font-size: 1rem;
+
+}
+
+.social-icons a {
+  color: #f5f5f5;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.footer-text {
+  text-align: center;
+  flex: 1;
+}
+
+.footer-text a {
+  color: #ff9900;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
+
+.scroll-top a {
+  color: #f5f5f5;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-bottom: 10px;
+  }
+
+  .scroll-top {
+    margin-top: 10px;
+  }
+}
+
+
+
+ </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">Marshall</div>
+    <div class="nav">
+      <a href="#Intro">Intro</a>
+      <a href="#Works">Works</a>
+      <a href="#About">About</a>
+      <a href="#Contact">Contact</a>
+    </div>
+    <a href="#" class="box">Let's Work Together</a>
+  </div>
+  <section class="hero-split">
+  <div class="hero-text">
+    <p>Hello, I'm Marshall</p>
+    <h1>A frontend developer who loves web application.</h1>
+  </div>
+  <div class="hero-image">
+    <img src="V=Marshall (1).jpg" alt="Marshall portrait">
+  </div>
+</section>
+<div class="scroll-button">
+  <a href="#next-section">
+    <span>Scroll for more</span>
+    <div class="arrow">&#x25BC;</div> <!-- Unicode down arrow -->
+  </a>
+</div>
+
+ <section class="hero">
+    <h1>An inspiring headline about yourself.</h1>
+    <h2 class="section-title">About</h2>
+    <p class="about-text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea voluptas velit. Nobis amet iste obcaecati veritatis, voluptatibus velit sit magni incidunt aliquid perferendis nulla nisi sapiente quas. Aut, mollitia!
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, harum consectetur eveniet ab vel debitis minima quo veritatis aliquid libero expedita nulla? Quos nihil nesciunt deleniti. Modi ex accusantium sapiente!
+    
+    </p>
+    
+    <button class="about-button">More About Me</button>
+    <div class="social-icons">
+      <a href="#"><img src="facebook.png" alt="Facebook" /></a>
+      <a href="#"><img src="instagram3.png" alt="Twitter" /></a>
+      <a href="#"><img src="twtter3.png" alt="Instagram" /></a>
+      <a href="#"><img src="youtube2.png" alt="Dribbble" /></a>
+    </div>
+  </section>
+
+<section class="expertise">
+  <h2 class="section-title">Expertise</h2>
+  <h3 class="expertise-heading">My key areas of expertise.</h3>
+  <p class="expertise-intro">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit debitis quam dignissimos veritatis atque pariatur magnam obcaecati fugit reprehenderit vel numquam facere esse est deserunt, perferendis commodi voluptatem similique.
+  </p>
+
+  <div class="expertise-list">
+    <div class="expertise-item">
+      <h4>01. Digital Marketing</h4>
+      <p>Quibusdam quis autem voluptatibus earum vel ex error ea magni. Rerum quam quos. Aut asperiores sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. Eaque velit eligendi ut magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.</p>
+    </div>
+    <div class="expertise-item">
+      <h4>02. Project Management</h4>
+      <p>Rerum quam quos. Quibusdam quis autem voluptatibus earum vel ex error ea magni. Aut asperiores sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. Eaque velit eligendi ut magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.</p>
+    </div>
+    <div class="expertise-item">
+      <h4>03. Content Marketing</h4>
+      <p>Eaque velit eligend. iQuibusdam quis autem voluptatibus earum vel ex error ea magni. Rerum quam quos. Aut asperiores sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. Eaque velit eligendi ut magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.</p>
+    </div>
+  </div>
+
+  <button class="expertise-button">View All Services</button>
+</section>
+<section class="clients">
+  <div class="clients-container">
+    <div class="clients-heading">
+      <h2>Clients</h2>
+      <p>I have had the privilege of working with these incredible brands.</p>
+    </div>
+    <div class="clients-description">
+      <p>
+        Quibusdam quis autem voluptatibus earum vel ex error ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit debitis quam dignissimos veritatis atque pariatur magnam obcaecati fugit reprehenderit vel numquam facere esse est deserunt, perferendis commodi voluptatem similique.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, numquam molestiae vel quaerat quas facilis voluptates rerum aspernatur quam voluptatem ea, vitae illo, omnis minus vero minima maiores quia nihil incidunt provident debitis ab qui quasi...
+      </p>
+    </div>
+  </div>
+</section>
+ <div class="container">
+    <div class="logo">
+      <img src="flash.png" alt="Flash Icon" />
+      <h2>Flash</h2>
+    </div>
+    <div class="logo">
+      <img src="Rise.jpg" alt="Rise Icon" />
+      <h2>Rise</h2>
+    </div>
+    <div class="logo">
+      <img src="cactus.png" alt="Cactus Icon" />
+      <h2>Cactus</h2>
+    </div>
+    <div class="logo">
+      <img src="pinpoint.png" alt="PinPoint Icon" />
+      <h2>PinPoint</h2>
+    </div>
+    <div class="logo">
+      <img src="proline.png" alt="ProLine Icon" />
+      <h2>ProLine</h2>
+    </div>
+    <div class="logo">
+      <img src="vision icon.jpg" alt="Vision Icon" />
+      <h2>Vision</h2>
+    </div>
+    <div class="logo">
+      <img src="volume.jpg" alt="Volume Icon" />
+      <h2>Volume</h2>
+    </div>
+    <div class="logo">
+      <img src="Hitech" alt="Hitech Icon" />
+      <h2>Hitech</h2>
+    </div>
+    <div class="logo">
+      <img src="Terabox.png" alt="Terra Icon" />
+      <h2>Terra</h2>
+    </div>
+  </div>
+
+<section class="testimonials">
+  ROLE MODEL
+  <div class="testimonial">
+    <img src="sridar vembu.jpeg" alt="steve jobs" class="avatar" />
+    <h3>Sridar Vembu</h3>
+    <p class="company">Zoho Corpration.</p>
+    </div>
+    <p class="quote">
+      In the 1990s, in a small apartment located in the suburbs of Chennai in southern India, a simple, yet revolutionary idea was born: "Build smart technology to help businesses work better." This idea evolved to become the world-class technology company we're known as today.
+
+
+    </p>
+  
+
+  <div class="testimonial">
+    <img src="steve jobs.png" alt="steve jobs" class="avatar" />
+    <h3>Steve jobs</h3>
+    <p class="company">Carnegie Steel Co.</p>
+     </div>
+    <p class="quote">
+      Steven Paul Jobs (February 24, 1955 – October 5, 2011) was an American businessman, inventor, and investor best known for co-founding the technology company Apple Inc. Jobs was also the founder of NeXT and chairman and majority shareholder of Pixar. He was a pioneer of the personal computer revolution of the 1970s and 1980s, along with his early business partner and fellow Apple co-founder Steve Wozniak.
+    </p>
+ 
+  
+
+  <div class="testimonial-nav">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+<section class="consultation">
+    <div class="content">
+      <h1>Get started with a consultation today.</h1>
+      </div>
+      <div class="Hit">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis rem, esse doloribus sint eaque at debitis enim vitae minus expedita ratione dignissimos sit nostrum optio sequi. Ipsa at beatae quam.
+      </p>
+      <div class="Hit2">
+      <a href="#" class="cta-button">Let's Work Together</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-section">
+  <h2>Latest articles from my blog.</h2>
+  <div class="articles">
+    <div class="article-card sponsored">
+      <h3>Sponsored: Need Web Hosting for Your Websites?</h3>
+      <p>
+        Need hosting for your website? We would highly recommend DreamHost. Enjoy 100% in-house support, guaranteed performance and uptime, 1-click installs, and a super-intuitive control panel to make managing your websites and projects easy. Sign up now to get started.
+      </p>
+    </div>
+    <div class="article-card productivity">
+      <h3>Productivity: 5 Marketing Productivity Apps for Your Team</h3>
+      <p>
+        Rerum quam quos. Quibusdam quis autem voluptatibus earum vel ex error ea magni. Aut asperiores sit mollitia. Rem neque et voluptatem eos quia sed eligendi et.
+      </p>
+    </div>
+    <div class="article-card seo">
+      <h3>SEO: 7 SEO Factors to Consider for Better Website Ranking</h3>
+      <p>
+        Quibusdam quis autem voluptatibus earum vel ex error ea magni. Rerum quam quos. Aut asperiores sit mollitia. Rem neque et voluptatem eos quia sed eligendi et.
+      </p>
+    </div>
+    <div class="article-card productivity">
+      <h3>Productivity: 5 Effective Web Design Principles</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ullam et laborum aperiam. Dignissimos quae voluptatibus ullam esse sapiente fugiat.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-column">
+    <h2>About Marshall</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illum quasi facere libero, fugiat laboriosam possimus reprehenderit eveniet vero voluptatum fugit ad quis veritatis suscipit beatae incidunt perferendis tempore earum hic repellendus quisquam recusandae ipsa id esse. Nobis, aut deleniti.
+    </p>
+  </div>
+  <div class="footer-column">
+    <h2>Site Links</h2>
+    <ul>
+      <li><a href="#">1.Home</a></li>
+      <li><a href="#">2.Services</a></li>
+      <li><a href="#">3.Journal</a></li>
+      <li><a href="#">4.About</a></li>
+      <li><a href="#">5.Contact</a></li>
+      <li><a href="#">6.DreamHost</a></li>
+    </ul>
+
+  </div>
+  <div class="footer-column">
+    <h2>Newsletter</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere ratione dignissimos.</p>
+    <form>
+      <input type="email" placeholder="Your Email Address" />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-dribbble"></i></a>
+  </div>
+
+  <div class="footer-text">
+    <p>Marshall</p>
+    <p>Design by <a href="#">StyleShout</a> Distribution by <a href="#">ThemeWagon</a></p>
+  </div>
+
+  <div class="scroll-top">
+    <a href="#"><i class="fas fa-arrow-up"></i></a>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
